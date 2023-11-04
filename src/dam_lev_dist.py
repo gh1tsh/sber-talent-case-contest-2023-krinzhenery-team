@@ -1,4 +1,4 @@
-def damerau_levenshtein_distance(left: str, right: str):
+def damerau_levenshtein_distance(left: str, right: str) -> float:
 
     # This function compute the Damerau-Levenshtein distance between two given
     # strings (left and right).
@@ -28,5 +28,5 @@ def damerau_levenshtein_distance(left: str, right: str):
 
     return 1 - (d[first_str_len - 1, second_str_len - 1] / max(len(left), len(right))) # simple metric
 
-def is_rewrite_damerau_levenshtein_distance(left: str, right: str, threshold: float):
+def is_rewrite_damerau_levenshtein_distance(left: str, right: str, threshold: float) -> bool:
     return damerau_levenshtein_distance(left, right) > threshold
