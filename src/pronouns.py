@@ -11,7 +11,7 @@ def build_pronoun_dictionary(line):
             result[word] += 1
     return result
 
-def check_pronoun_correspondence(line1, line2):
+def check_pronoun_correspondence(line1 : str, line2 : str) -> bool:
     dict1 = build_pronoun_dictionary(line1)
     dict2 = build_pronoun_dictionary(line2)
     return dict1 == dict2
