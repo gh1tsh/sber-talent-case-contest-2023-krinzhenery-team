@@ -1,4 +1,4 @@
-def levenshtein_distance(left, right):
+def levenshtein_distance(left, right) -> float:
     m = len(left)
     n = len(right)
 
@@ -22,5 +22,5 @@ def levenshtein_distance(left, right):
 
     return 1 - (d[m][n] / max(len(left), len(right)))
 
-def is_rewrite_levenshtein_distance(left: str, right: str, threshold: float)
+def is_rewrite_levenshtein_distance(left: str, right: str, threshold: float) -> bool:
     return levenshtein_distance(left, right) > threshold
