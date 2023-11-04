@@ -2,18 +2,12 @@ from itertools import product
 from collections import deque
 
 
-# This solution was taken from:
-# https://johnlekberg.com/blog/2020-10-25-seq-align.html
+
 def needleman_wunsch(left, right):
     # This is Needleman-Wunsch sequence alignment algorithm implementation.
     # Time complexity: O(n * m) where n, m - lengths of sequences
-
+    #
     # left, right: any iterable sequences.
-
-    # Code based on pseudocode in Section 3 of:
-    # Naveed, Tahir; Siddiqui, Imitaz Saeed; Ahmed, Shaftab.
-    # "Parallel Needleman-Wunsch Algorithm for Grid." n.d.
-    # https://upload.wikimedia.org/wikipedia/en/c/c4/ParallelNeedlemanAlgorithm.pdf
 
     N, M = len(left), len(right)
     s = lambda a, b: int(a == b)
@@ -22,7 +16,6 @@ def needleman_wunsch(left, right):
     LEFT = (-1, 0)
     UP = (0, -1)
 
-    # Create tables F and Ptr
     F = {}
     Ptr = {}
 
@@ -42,8 +35,6 @@ def needleman_wunsch(left, right):
         )
         F[i, j], Ptr[i, j] = max(zip(option_F, option_Ptr))
 
-    # Work backwards from (N - 1, M - 1) to (0, 0)
-    # to find the best alignment.
     alignment = deque()
     i, j = N - 1, M - 1
     while i >= 0 and j >= 0:
@@ -64,4 +55,9 @@ def needleman_wunsch(left, right):
         alignment.appendleft((None, j))
         j -= 1
 
-    return list(alignment)
+    return alignment
+
+# Print all alignments in convenient format
+def print_alignment_beautify(first_seq, second_seq, alignment):
+    print("".join("-" if e is None else first_seq[e] for e, _ in alignment))
+    print("".join("-" if e is None else second_seq[e] for _, e in alignment))
