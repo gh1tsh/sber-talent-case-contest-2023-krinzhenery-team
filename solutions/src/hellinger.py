@@ -1,4 +1,4 @@
-from countVectorizer import *
+from src.countVectorizer import *
 import numpy as np
 
 # Расстояние Хеллингера

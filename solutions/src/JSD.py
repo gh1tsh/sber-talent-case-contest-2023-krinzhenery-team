@@ -1,5 +1,6 @@
 import scipy.stats
-from countVectorizer import *
+import numpy as np
+from src.countVectorizer import *
 
 # Дивергенция Дженсена-Шеннона
 def JSD(left:str, right:str)->float:

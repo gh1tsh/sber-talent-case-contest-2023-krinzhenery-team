@@ -1,6 +1,6 @@
 import numpy as np
 from numpy.linalg import norm
-from countVectorizer import *
+from src.countVectorizer import *
 
 #Косинусное сходство при векторизации count
 def cosine_count(left : str,right : str) -> float:

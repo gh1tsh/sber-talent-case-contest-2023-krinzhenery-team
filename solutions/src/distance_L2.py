@@ -1,5 +1,5 @@
 from math import sqrt
-from countVectorizer import *
+from src.countVectorizer import *
 
 # Расстояние L2
 def distance_L2(left:str, right:str)->float:
