@@ -9,8 +9,8 @@
 
 ## Содержание работы
 * [Анализ задачи](./solutions/Analisys.ipynb)
-* [Решение №1](./solutions/Solution/Solution1.ipynb)
-* [Решение №2](./solutions/Solution/Solution2.ipynb)
+* [Решение №1](./solutions/Solution1.ipynb)
+* [Решение №2](./solutions/Solution2.ipynb)
 
 ### Исходные данные
 * [sample.json](./data/sample.json)
