@@ -19,5 +19,6 @@ __all__ = [
     "tfidfVectorizer",
     "word_set",
     "load_dataset",
-    "hamming_distance_custom"
+    "hamming_distance_custom",
+    "save_groups"
 ]
