@@ -56,8 +56,8 @@ def is_rewrite_ngram(line1 : str, line2 : str, threshold : float) -> bool:
 # Tverskoy index
 
 def tverskiy_ngram_comparison(line1: str, line2: str) -> float:
-    dict1 = build_ngrams(line1)
-    dict2 = build_ngrams(line2)
+    dict1 = build_ngrams(line1, 2)
+    dict2 = build_ngrams(line2, 2)
     cnt_overlap = count_dictionary_overlap(dict1, dict2)
     cnt_difference1 = count_dictionary_difference(dict1, dict2)
     cnt_difference2 = count_dictionary_difference(dict2, dict1)

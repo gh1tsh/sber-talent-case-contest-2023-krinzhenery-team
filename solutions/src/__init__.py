@@ -18,4 +18,6 @@ __all__ = [
     "sorensen",
     "tfidfVectorizer",
     "word_set",
+    "load_dataset",
+    "hamming_distance_custom"
 ]
