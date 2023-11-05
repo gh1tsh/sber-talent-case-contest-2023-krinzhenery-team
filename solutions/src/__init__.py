@@ -20,5 +20,6 @@ __all__ = [
     "word_set",
     "load_dataset",
     "hamming_distance_custom",
-    "save_groups"
+    "save_groups",
+    "hamming_distance_and_sequence_alignment_composition"
 ]
