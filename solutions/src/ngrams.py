@@ -64,5 +64,5 @@ def tverskiy_ngram_comparison(line1: str, line2: str) -> float:
     return cnt_overlap / (cnt_overlap + 0.5 * cnt_difference1 + 0.5 * cnt_difference2)
 
 
-def is_rewrite_tverskiy_ngram(line1 : str, line2 : str) -> bool:
+def is_rewrite_tverskiy_ngram(line1 : str, line2 : str, threshold : float) -> bool:
     return tverskiy_ngram_comparison(line1, line2) > threshold

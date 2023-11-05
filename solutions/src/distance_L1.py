@@ -1,4 +1,4 @@
-from countVectorizer import *
+from src.countVectorizer import *
 
 # Расстояние L1
 def distance_L1(left:str, right:str)->float:

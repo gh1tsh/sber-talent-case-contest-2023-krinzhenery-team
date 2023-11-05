@@ -1,6 +1,6 @@
 import numpy as np
 from numpy.linalg import norm
-from tfidfVectorizer import *
+from src.tfidfVectorizer import *
 
 #Косинусное сходство при векторизации tf-idf
 def cosine_tfidf(left : str,right : str) -> float:
