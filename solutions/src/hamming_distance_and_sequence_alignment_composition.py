@@ -6,7 +6,7 @@
 # sequence alignment algorithm (as an auxiliary) and the Hamming distance
 # algorithm.
 
-from needleman_wunsch import needleman_wunsch
+from src.needleman_wunsch import needleman_wunsch
 
 
 
