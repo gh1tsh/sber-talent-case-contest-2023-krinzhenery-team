@@ -1,6 +1,6 @@
 def hamming_distance_custom(left:str,right:str)->float:
     if len(left) != len(right):
-        return False
+        return 0
     c = 0
     for i in range(len(left)):
         c += left[i]!=right[i]
