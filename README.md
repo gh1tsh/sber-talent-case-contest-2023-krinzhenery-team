@@ -11,6 +11,7 @@
 * [Анализ задачи](./solutions/Analisys.ipynb)
 * [Решение №1](./solutions/Solution1.ipynb)
 * [Решение №2](./solutions/Solution2.ipynb)
+* [Сравнение решений](./solutions/Solution-comparison.ipynb)
 
 ### Исходные данные
 * [sample.json](./data/sample.json)
