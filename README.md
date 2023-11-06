@@ -12,6 +12,7 @@
 * [Решение №1](./solutions/Solution1.ipynb)
 * [Решение №2](./solutions/Solution2.ipynb)
 * [Сравнение решений](./solutions/Solution-comparison.ipynb)
+* [Презентация проекта](./docs/Solution%20presentation.pdf)
 
 ### Исходные данные
 * [sample.json](./data/sample.json)
