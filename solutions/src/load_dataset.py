@@ -8,11 +8,9 @@ def preprocess_text(text):
     text = re.sub(r'_', ' ', text)       # Удаляем нижнее подчеркиваниее на всякий случай
     text = re.sub(r'\s+', ' ', text)     # Удаляем лишние пробелы
     text = text.replace('ё','е')         # заменяем ё на е
-    return text.strip()
-
+    return text.strip() 
 
 ## Загрузка датасета
 def load(filepath):
     df = pd.read_json(filepath)
-    df['text'] = df['text'].apply(preprocess_text)
     return df['text'].tolist()
