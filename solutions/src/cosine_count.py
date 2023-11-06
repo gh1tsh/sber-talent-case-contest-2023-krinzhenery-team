@@ -2,7 +2,7 @@ import numpy as np
 from numpy.linalg import norm
 from src.countVectorizer import *
 
-#Косинусное сходство при векторизации count
+#Косинусное сходство при векторизации подсчетом
 def cosine_count(left : str,right : str) -> float:
     vec = countVectorize(left,right)
     return np.dot(vec[0],vec[1])/(norm(vec[0])*norm(vec[1]))

@@ -2,13 +2,8 @@ from itertools import product
 from collections import deque
 
 
-
+# Алгоритм выравнивания последовательностей Нидлмана-Вунша
 def needleman_wunsch(left, right):
-    # This is Needleman-Wunsch sequence alignment algorithm implementation.
-    # Time complexity: O(n * m) where n, m - lengths of sequences
-    #
-    # left, right: any iterable sequences.
-
     N, M = len(left), len(right)
     s = lambda a, b: int(a == b)
 
@@ -57,7 +52,7 @@ def needleman_wunsch(left, right):
 
     return alignment
 
-# Print all alignments in convenient format
+# Вывод выравнивания в форматированном виде
 def print_alignment_beautify(first_seq, second_seq, alignment):
     print("".join("-" if e is None else first_seq[e] for e, _ in alignment))
     print("".join("-" if e is None else second_seq[e] for _, e in alignment))

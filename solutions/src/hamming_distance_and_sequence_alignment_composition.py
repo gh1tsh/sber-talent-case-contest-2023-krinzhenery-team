@@ -2,9 +2,8 @@
 # Created on 04.11.2023 at 22:04
 # Author: ghitsh
 #
-# Description: This file contains the implementation of the composition of the
-# sequence alignment algorithm (as an auxiliary) and the Hamming distance
-# algorithm.
+# Описание: Этот файл содержит реализацию сочетания алгоритмов 
+# выравнивания последовательностей (в качестве вспомогательного) и алгоритма расстояния Хэмминга.
 
 from src.needleman_wunsch import needleman_wunsch
 
@@ -12,10 +11,9 @@ from src.needleman_wunsch import needleman_wunsch
 
 def hamming_distance_normalized(left: str, right: str) -> float:
 
-    # left, right - sequences of words separated by spaces (sentences or texts)
+    # left, right - посследовательности слов, разделенные пробелами
 
-    aligned_sequences_sample = [] # A list of tuples containing the indexes of
-                                  # the original sequences
+    aligned_sequences_sample = [] # Список кортежей, содержащих индексы изначальной последовательности
 
     seq_1 = left.split(' ')
     seq_2 = right.split(' ')
@@ -32,15 +30,15 @@ def hamming_distance_normalized(left: str, right: str) -> float:
         first_seq_aligned = seq_1
         second_seq_aligned = seq_2
 
-    d = 0 # Hamming's distance
+    d = 0 # Расстояние Хэмминга
     for i in range(len(first_seq_aligned)):
         d += first_seq_aligned[i] != second_seq_aligned[i]
 
     return 1 - (d / max(len(seq_1), len(seq_2))) # Simple metric
 
 def is_rewrite_hamming_distance_normalized(left: str, right: str, threshold: float) -> bool:
-    # left, right - sequences of words separated by spaces (sentences or texts)
+    # left, right - последовательности слов, разделенные пробелами
     #
-    # threshold - some value (defined by user) which determines whether
-    # a given sequence of words is rewrite.
+    # threshold - некоторое значение (определяемое пользователем), которое определяет, 
+    # является ли вторая последовательность рерайтом первой
     return hamming_distance_normalized(left,right) > threshold

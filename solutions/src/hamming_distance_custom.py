@@ -1,3 +1,4 @@
+# Кастомный алгоритм расчета расстояния Хэмминга
 def hamming_distance_custom(left:str,right:str)->float:
     if len(left) != len(right):
         return 0

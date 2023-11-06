@@ -1,4 +1,4 @@
-# алгоритм Майерса
+# Алгоритм Майерса
 def myers(left : str, right : str) -> float:
     m = len(left)
     n = len(right)

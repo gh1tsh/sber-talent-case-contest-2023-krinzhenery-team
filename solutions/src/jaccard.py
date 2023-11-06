@@ -1,4 +1,4 @@
-# коэффициент Жаккарда
+# Коэффициент Жаккарда
 def Jaccard(left : str, right : str) -> float:
     a = set(left)
     b = set(right)

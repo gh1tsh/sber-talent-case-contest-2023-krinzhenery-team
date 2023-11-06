@@ -1,4 +1,4 @@
-# расстояние Карловского
+# Расстояние Карловского
 def karlovskiy_distance(left : str, right : str) -> float:
     left = '\b\b' + left + '\f\f'
     right = '\b\b' + right + '\f\f'

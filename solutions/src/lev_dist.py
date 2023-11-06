@@ -1,3 +1,4 @@
+# Рассчет расстояния Левенштейна
 def levenshtein_distance(left, right) -> float:
     m = len(left)
     n = len(right)
@@ -16,9 +17,9 @@ def levenshtein_distance(left, right) -> float:
                 cost = 0
             else:
                 cost = 1
-            d[i][j] = min(d[i - 1][j] + 1,        # deletion
-                          d[i][j - 1] + 1,        # insertion
-                          d[i - 1][j - 1] + cost) # substitution   
+            d[i][j] = min(d[i - 1][j] + 1,        # Удаление
+                          d[i][j - 1] + 1,        # Вставка
+                          d[i - 1][j - 1] + cost) # Замена  
 
     return 1 - (d[m][n] / max(len(left), len(right)))
 
