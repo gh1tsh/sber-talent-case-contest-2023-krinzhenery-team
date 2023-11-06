@@ -25,11 +25,11 @@ def filter(df, groups,function,threshold,check_pronoun=True):
             if df['used'][j]: # Проверка метки использования строки
                 continue
             if check_pronoun:
-                if(function(df['text'][i],df['text'][j],threshold) and pronouns.check_pronoun_correspondence(df['text'][i],df['text'][j])):
+                if(function(df['text_preprocess'][i],df['text_preprocess'][j],threshold) and pronouns.check_pronoun_correspondence(df['text_preprocess'][i],df['text_preprocess'][j])):
                     groups[-1].append(df['text'][j])
                     df['used'][j] = True
             else:
-                if(function(df['text'][i],df['text'][j],threshold)):
+                if(function(df['text_preprocess'][i],df['text_preprocess'][j],threshold)):
                     groups[-1].append(df['text'][j])
                     df['used'][j] = True
         if len(groups[-1]) == 1: # Если строка не имеет рерайта, то группа не формируется
@@ -39,7 +39,7 @@ def filter(df, groups,function,threshold,check_pronoun=True):
 
 def group_by_filtering(filepath):
     df = pd.read_json(filepath)
-    df['text'] = df['text'].apply(load_dataset.preprocess_text)
+    df['text_preprocess'] = df['text'].apply(load_dataset.preprocess_text)
     pd.options.mode.chained_assignment = None # Убираем лишние предупреждения
     df['used'] = [False] * len(df)
     groups = []
