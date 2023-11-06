@@ -6,13 +6,16 @@ from src import ngrams
 from src import pronouns
 from src import hamming_distance_custom
 
+from tqdm.auto import tqdm
+from ipywidgets import FloatProgress
+
 
 # Функция группировки строк
 def find_groups(data):
     groups = []                        # Cписок для сохранения групп
     threshold = 0.9                    # Ограничение для алгоритмов верификации рерайтов
     used = [False for _ in range(len(data))]    # Список меток использования строк
-    for current_id in range(len(data)):
+    for current_id in tqdm(range(len(data))):
         if (used[current_id]):
             continue
         current_group = []             # Текущая группа
@@ -28,7 +31,7 @@ def find_groups(data):
                dam_lev_dist.is_rewrite_damerau_levenshtein_distance(line1, line2, threshold) or
                distance_L2.is_rewrite_distance_L2(line1, line2, threshold) or
                ngrams.is_rewrite_tverskiy_ngram(line1, line2, threshold)):
-                if (pronouns.check_pronoun_correspondence(line1, line2) or hamming_distance_custom.is_rewrite_hamming_distance_custom(line1, line2, 0.95)):
+                if (pronouns.check_pronoun_correspondence(line1, line2) or (hamming_distance_custom.clean_hamming_distance(line1, line2) == 1)):
                     current_group.append(line2)  # Добавление строки в текущую группу
                     used[next_id] = True
         groups.append(current_group)             # Добавление сформированной группы к результирующему списку

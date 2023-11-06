@@ -6,13 +6,15 @@ from src import cosine_tfidf
 from src import jaro_winkler
 from src import pronouns
 import pandas as pd
+from tqdm.auto import tqdm
+from ipywidgets import FloatProgress
 
 # Решение 1. Фильтрация
 
 # Функция фильтрации на основе алгоритма верификации рерайтов (function) и заданного ограничения (threshold) 
 # c возможностью проверки наборов местоимений (check_pronoun) 
 def filter(df, groups,function,threshold,check_pronoun=True):
-    for i in range(len(df)):
+    for i in tqdm(range(len(df))):
         if df['used'][i]:  # Проверка метки использования строки
             continue
         groups.append([])
