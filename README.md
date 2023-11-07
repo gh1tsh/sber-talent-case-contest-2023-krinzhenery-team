@@ -7,6 +7,10 @@
 * [Новиков Михаил](https://github.com/rikire)
 * [Руденко Юрий](https://github.com/Ten-Do)
 
+## Задание
+* [Постановка задачи](./docs/Talent%20Case%20Contest%20-%20Отборочный%20этап.pdf)
+* [Исходные данные](./data/sample.json)
+
 ## Содержание работы
 * [Анализ задачи](./solutions/Analisys.ipynb)
 * [Решение №1](./solutions/Solution1.ipynb)
@@ -14,8 +18,7 @@
 * [Сравнение решений](./solutions/Solution-comparison.ipynb)
 * [Презентация проекта](./docs/Solution%20presentation.pdf)
 
-### Исходные данные
-* [sample.json](./data/sample.json)
+
 
 ### Полученные результаты
 * [Результат №1](./output/solution1-result.json)
