@@ -1,4 +1,4 @@
-# Решение хакатона Talent Case Contest 2023
+# Решение хакатона Talent Case Contest 2023 
 ## Команда: Кринженеры
 ## Участники:
 * [**Галимуллин Данис (лидер команды)**](https://github.com/DanisDeveloper)
