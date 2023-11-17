@@ -1,3 +1,6 @@
+from src import load_dataset
+from src import karlovskiy_distance
+from src import KMeans
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -30,7 +33,7 @@ def clusterization(strings:List[str])->List[List[str]]:
     strings_vectorized_nD = PCA(n_components=len(strings_vectorized)//2).fit_transform(strings_vectorized)
 
     # Кластеризация методом К-средних
-    model = KMeans(n_clusters=n_clusters).fit(strings_vectorized_nD)
+    model = KMeans.KMeans(n_clusters=n_clusters).fit(strings_vectorized_nD)
 
     # Группировка строк по получившимся кластерам
     clusters = {}
@@ -46,7 +49,7 @@ def clusterization(strings:List[str])->List[List[str]]:
 
 def group_by_clusterization(filepath):
     # Считывание и подготовка данных
-    df = pd.read_json('./../data/sample.json')
+    df = pd.read_json(filepath)
     df['text_preprocess'] = df['text'].apply(load_dataset.preprocess_text)
     strings = list(df['text_preprocess'])
     

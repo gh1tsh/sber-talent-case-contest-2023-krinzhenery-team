@@ -11,7 +11,7 @@ class KMeans:
         array = np.array(array)
         # Выбираем центры кластеров случайным образом
         # self.centroids = array[np.random.choice(range(len(array)),size=self.n_clusters,replace=False)]
-        self.centroids = array[np.linspace(0,len(array),n_clusters)]
+        self.centroids = array[np.linspace(0,len(array)-1,self.n_clusters,dtype=int)]
 
         for _ in range(self.max_iters):
             clusters = [[] for _ in range(self.n_clusters)]
