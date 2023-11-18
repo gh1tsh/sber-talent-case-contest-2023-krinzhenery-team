@@ -22,6 +22,7 @@ __all__ = [
     "hamming_distance_custom",
     "save_groups",
     "hamming_distance_and_sequence_alignment_composition",
+    "bk_tree",
     "solution1",
     "solution2"
 ]
