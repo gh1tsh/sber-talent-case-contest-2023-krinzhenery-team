@@ -39,9 +39,9 @@ class node:
 
 
 class bk_tree:
-
-    def __init__(self, words):
+    def __init__(self, words, rates):
         self.words = words
+        self.rates = rates
         self.root = None
         self.size = 0
 
@@ -76,6 +76,7 @@ class bk_tree:
             distance = edge[2]
             vertexes[source].edges[distance] = vertexes[destination]
         self.size = len(self.words)
+        self.rate = [1] * len(self.words)
         
     def add_word(self, word_id):
         if (self.root == None):
@@ -105,7 +106,7 @@ class bk_tree:
             current_word = self.words[current_node.word_id]
             distance = levenshtein(pattern, current_word)
             if (distance <= error_limit):
-                result.append((distance, current_word))
+                result.append((distance, abs(len(pattern) - len(current_word)), -self.rates[current_node.word_id], current_word))
             left = min(1, distance - error_limit)
             right = distance + error_limit
             for key, value in current_node.edges.items():
@@ -115,4 +116,5 @@ class bk_tree:
         if (len(result) == 0):
             return pattern
         else:
-            return result[0][1]
+            return result[0][3]
+           

@@ -23,6 +23,9 @@ __all__ = [
     "save_groups",
     "hamming_distance_and_sequence_alignment_composition",
     "bk_tree",
+    "word_collation",
+    "negatives",
     "solution1",
-    "solution2"
+    "solution2",
+    "solution5"
 ]
