@@ -22,10 +22,14 @@ __all__ = [
     "hamming_distance_custom",
     "save_groups",
     "hamming_distance_and_sequence_alignment_composition",
+    "bk_tree",
+    "word_collation",
+    "negatives",
     "KMeans",
     "Function",
     "solution1",
     "solution2",
     "solution3",
-    "solution4"
+    "solution4",
+    "solution5"
 ]
