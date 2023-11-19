@@ -15,10 +15,11 @@
 * [Анализ задачи](./solutions/Analisys.ipynb)
 * [Решение №1](./solutions/Solution1.ipynb)
 * [Решение №2](./solutions/Solution2.ipynb)
+* [Решение №3](./solutions/Solution3.ipynb)
+* [Решение №4](./solutions/Solution4.ipynb)
+* [Решение №5](./solutions/Solution5.ipynb)
 * [Сравнение решений](./solutions/Solution-comparison.ipynb)
 * [Презентация проекта](./docs/Solution%20presentation.pdf)
-
-
 
 ### Полученные результаты
 * [Результат №1](./output/solution1-result.json)
