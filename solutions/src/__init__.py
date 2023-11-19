@@ -25,7 +25,11 @@ __all__ = [
     "bk_tree",
     "word_collation",
     "negatives",
+    "KMeans",
+    "Function",
     "solution1",
     "solution2",
+    "solution3",
+    "solution4",
     "solution5"
 ]
