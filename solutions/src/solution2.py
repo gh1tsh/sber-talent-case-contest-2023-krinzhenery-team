@@ -37,7 +37,7 @@ def find_groups(data, base_data):
         groups.append(current_group)             # Добавление сформированной группы к результирующему списку
     return groups
 
-def group_by_equal_vote(filepath):
+def group_by_general_coverage(filepath):
     base_data = load_dataset.load(filepath)
     data = data = [load_dataset.preprocess_text(text) for text in base_data]
     groups = find_groups(data, base_data)
