@@ -23,7 +23,9 @@ __all__ = [
     "save_groups",
     "hamming_distance_and_sequence_alignment_composition",
     "KMeans",
+    "Function",
     "solution1",
     "solution2",
+    "solution3",
     "solution4"
 ]
