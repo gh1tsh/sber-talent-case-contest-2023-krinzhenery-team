@@ -5,9 +5,11 @@ from collections import deque
 from tqdm.auto import tqdm
 from ipywidgets import FloatProgress
 
-def levenshtein(seq1, seq2):
-    size_x = len(seq1) + 1
-    size_y = len(seq2) + 1
+
+# Расстояние Левенштейна для расчета расстояния между вершинами дерева
+def levenshtein(data1, data2):
+    size_x = len(data1) + 1
+    size_y = len(data2) + 1
     matrix = np.zeros((size_x, size_y))
     for x in range(size_x):
         matrix[x, 0] = x
@@ -16,7 +18,7 @@ def levenshtein(seq1, seq2):
 
     for x in range(1, size_x):
         for y in range(1, size_y):
-            if seq1[x - 1] == seq2[y - 1]:
+            if data1[x - 1] == data2[y - 1]:
                 matrix[x, y] = min(
                     matrix[x - 1, y] + 1,
                     matrix[x - 1, y - 1],
@@ -31,24 +33,26 @@ def levenshtein(seq1, seq2):
     return (matrix[size_x - 1, size_y - 1])
 
 
-
+# Класс-вершина дерева
 class node:
     def __init__(self, word_id):
         self.word_id = word_id
         self.edges = dict()
 
-
+# BK-дерево для поиска корректных слов
 class bk_tree:
     def __init__(self, words, rates):
         self.words = words
         self.rates = rates
         self.root = None
         self.size = 0
-
+    
+    # Построение дерево по словарю
     def build(self):        
         for i in tqdm(range(len(self.words))):
             self.add_word(i)
-            
+    
+    # Сохранение структуры дерева в файл
     def save(self, filepath):
         routes = []
         order = deque()
@@ -65,6 +69,7 @@ class bk_tree:
         with open(filepath, 'w', encoding='utf-8') as outfile:
             json.dump(routes, outfile, ensure_ascii=False)
     
+    # Загрузка структуры дерева из файла
     def load(self, filepath):
         routes = pd.read_json(filepath).values.tolist()
         vertexes = [node(i) for i in range(len(self.words))]
@@ -77,7 +82,8 @@ class bk_tree:
             vertexes[source].edges[distance] = vertexes[destination]
         self.size = len(self.words)
         self.rate = [1] * len(self.words)
-        
+    
+    # Добавление слова в дерево
     def add_word(self, word_id):
         if (self.root == None):
             self.root = node(word_id)
@@ -97,6 +103,7 @@ class bk_tree:
             else:
                 current_node = current_node.edges[distance]
     
+    # Поиск ближайшего корректного слова
     def find_correct(self, pattern, error_limit):
         result = []
         order = deque()

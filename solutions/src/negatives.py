@@ -1,3 +1,4 @@
+# Подсчет четности отрицаний в строке
 def count_negatives(line):
     words = line.split()
     negations = ["не", "ни"]
@@ -8,5 +9,6 @@ def count_negatives(line):
                 negation_counters[i] += 1
     return sum(negation_counters)
 
+# Функция верификации рерайтов на основе четности отрицаний
 def check_negative_corresponense(line1, line2):
     return (count_negatives(line1) % 2) == (count_negatives(line2) % 2)
