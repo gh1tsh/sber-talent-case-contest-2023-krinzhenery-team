@@ -89,7 +89,7 @@ def find_groups(data, base_data):
     return groups
 
 
-def group_by_linguistic_analysis(filepath):
+def group_by_frequency_analysis(filepath):
     base_data = load_dataset.load(filepath)
     data = [load_dataset.preprocess_text(text) for text in base_data] # Убираем знаки препинания и лишние пробелы
     # Находим уникальные слова в датасете
