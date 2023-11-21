@@ -35,7 +35,10 @@
 
 
 ## Инструкция по использованию
-На вашей системе должны быть установлены python и git
+Необходимые компоненты:
+* Python
+* Git
+
 В командной строке прописать следующие команды:
 ```
 git clone https://github.com/gh1tsh/sber-talent-case-contest-2023-krinzhenery-team.git
