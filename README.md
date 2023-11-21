@@ -24,3 +24,13 @@
 ### Полученные результаты
 * [Результат №1](./output/solution1-result.json)
 * [Результат №2](./output/solution2-result.json)
+
+### Инструкция по использованию
+* Создать папку и перейти в нее
+* В командной строке прописать следующие команды
+  1) git clone https://github.com/gh1tsh/sber-talent-case-contest-2023-krinzhenery-team.git   
+  2) После прописать python -m venv venv
+  3) source venv/bin/activate
+  4) pip install -r requirements.txt
+  5) jupyter notebook
+* Должен запуститься браузер, в котором доступны все файлы проекта
