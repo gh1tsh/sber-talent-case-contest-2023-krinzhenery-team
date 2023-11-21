@@ -8,7 +8,8 @@
 * [Руденко Юрий](https://github.com/Ten-Do)
 
 ## Задание
-* [Постановка задачи](./docs/Talent%20Case%20Contest%20-%20Отборочный%20этап.pdf)
+* [Постановка задачи - Отборочный этап](./docs/Talent%20Case%20Contest%20-%20Отборочный%20этап.pdf)
+* [Постановка задачи - Финальный этап](./docs/Talent%20Case%20Contest%202023%20Финал.pdf)
 * [Исходные данные](./data/sample.json)
 
 ## Содержание работы
@@ -23,6 +24,7 @@
 ## Презентация проекта
 * [Отборочный этап](./docs/Solution%20presentation.pdf)
 * [Финал](./docs/Solution%20presentation.pdf)
+<!-- TODO: поменять ссылку на презентацию -->
 
 ### Полученные результаты
 * [Результат №1](./output/solution1-result.json)
