@@ -26,11 +26,15 @@
 * [Финал](./docs/Solution%20presentation.pdf)
 <!-- TODO: поменять ссылку на презентацию -->
 
-### Полученные результаты
+## Полученные результаты
 * [Результат №1](./output/solution1-result.json)
 * [Результат №2](./output/solution2-result.json)
+* [Результат №3](./output/solution3-result.json)
+* [Результат №4](./output/solution4-result.json)
+* [Результат №5](./output/solution5-result.json)
 
-### Инструкция по использованию
+
+## Инструкция по использованию
 
 В командной строке прописать следующие команды:
 ```
