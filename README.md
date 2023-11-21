@@ -19,7 +19,10 @@
 * [Решение №4 - Итеративная кластеризация](./solutions/Solution4.ipynb)
 * [Решение №5 - Частотный анализ](./solutions/Solution5.ipynb)
 * [Анализ решений](./solutions/Solution-analysis.ipynb)
-* [Презентация проекта](./docs/Solution%20presentation.pdf)
+
+## Презентация проекта
+* [Отборочный этап](./docs/Solution%20presentation.pdf)
+* [Финал](./docs/Solution%20presentation.pdf)
 
 ### Полученные результаты
 * [Результат №1](./output/solution1-result.json)
